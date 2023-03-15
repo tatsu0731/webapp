@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="Ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/asset/webapp.css">
+<link rel="stylesheet" href="/asset/webapp-modal.css">
+<link rel="stylesheet" href="/asset/loading.css">
+<link rel="stylesheet" href="/asset/done.css">
+<title>webapp</title>
+<script src="./asset/webapp.js" defer></script>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/css/modaal.min.css">
+<!--<script src="./asset/webapp2.js" defer></script>
+<script src="./asset/webapp3.js" defer></script>>-->
+<!-- <script type="text/javascript" src="https://www.google.com/jsapi"></script> -->
+</head>
+<body>
+<header>
+  <section class="top">
+  <div class="logoweek">
+    <img src="/img/logo.svg">
+    <p class="week">4th week</p>
+  </div>
+  <button class="js-openModal"><a href="#info" class="modal-open">記録・投稿</a></button>
+  </section>
+</header>
+<!-- 以下モーダルウィンドウ -->
+<div class="modaldal container" id="info">
+  <div class='modal-top'>
+    <button class="close-button js-closeModal">×</button>
+  </div>
+<section class="modal">
+<div class="modal-box-top">
+<div class="modal-box">
+  <div>
+  <p>学習日</p>
+  <input type="datetime-local">
+  <p>学習コンテンツ（複数選択可）</p>
+  <div class="choice-cont">
+    <p class="choice"><input type="checkbox">N予備校</p>
+    <p class="choice"><input type="checkbox">ドットインストール</p>
+    <p class="choice"><input type="checkbox">POSSE課題</p>
+  </div>
+  <p>学習言語（複数選択可）</p>
+  <div class="choice-cont">
+    <p class="choice"><input type="checkbox">HTML</p>
+    <p class="choice"><input type="checkbox">CSS</p>
+    <p class="choice"><input type="checkbox">JavaScript</p>
+  </div>
+  <div class="choice-cont">
+    <p class="choice"><input type="checkbox">PHP</p>
+    <p class="choice"><input type="checkbox">Laravel</p>
+    <p class="choice"><input type="checkbox">SQL</p>
+    <p class="choice"><input type="checkbox">SHELL</p>
+  </div>
+  <div class="choice-cont">
+    <p class="choice"><input type="checkbox">情報システム基礎知識（その他）</p>
+  </div>
+  </div>
+  <div>
+  <p>学習時間</p>
+  <input type="number">
+  <p>Twitter用コメント</p>
+  <textarea></textarea>
+  <p><input type="checkbox">Twitterにシェアする</p>
+  </div>
+</div>
+</div>
+<div class="modal-button">
+<button class="btn"><!-- twitter -->
+  <a href="http://twitter.com/share? &text=Twitterのシェアをするときの文章です&hashtags=POSSE" target="_blank" rel="nofollow noopener noreferrer">記録・投稿</a>
+</button>
+</div>
+</section>
+<!-- ローディング画面 -->
+<div class="loading">
+  <span class="circle"></span>
+</div>
+<!-- 投稿完了画面 -->
+<section class="done">
+  <p class="owesome">OWESOME!</p>
+  <img src="./img/checkmark.svg" class="check">
+  <div class="done-text">
+    <p>記録・投稿</p>
+    <p>完了しました</p>
+  </div>
+</section>
+</div>
+<!-- modal終了以下メイン -->
+<main>
+  <section class="box">
+  <section class="box-left">
+  <section class="score">
+    <div class="today">
+    <p class="label">today</p>
+    <p class="score-memo">3</p>
+    <p class="hour">hour</p>
+    </div>
+    <div class="month">
+    <p class="label">Month</p>
+    <p class="score-memo">120</p>
+    <p class="hour">hour</p>
+    </div>
+    <div class="total">
+    <p class="label">Total</p>
+    <p class="score-memo">1348</p>
+    <p class="hour">hour</p>
+    </div>
+  </section>
+  <canvas class="chart" id="chart">
+  </canvas>
+  </section>
+  <section class="box-right">
+  <div class="lang-box">
+    <p class="lang-text">学習言語</p>
+    <canvas class="lang" id="lang"></canvas>
+  </div>
+  <div class="cont-box">
+    <p class="cont-text">学習コンテンツ</p>
+    <canvas class="cont" id="cont"></canvas>
+  </div>
+  </section>
+  </section>
+</main>
+<footer>
+  <p class="date">2020年 10月</p>
+</footer>
+<!--for chart bar-->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Modaal/0.4.4/js/modaal.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,18 @@
+.done{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ display: none;
+}
+.owesome{
+ color: #97ae73;
+}
+.check{
+ background-color: #97ae73;
+ border-radius: 32px;
+}
+.done-text{
+ display: flex;
+ flex-direction: column;
+}
+
